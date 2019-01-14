@@ -1,0 +1,120 @@
+:root {
+    --header-bg-color: #61c9a8;
+    --nav-bg-color: #7dd2b7;
+    --accent-color: gray;
+    --nav-font-color: #1c161c;
+ }
+
+ * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ }
+
+
+ body {
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    font-family: sans serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+ }
+
+ section#page {
+     min-height: 100%;
+ }
+
+ #page {
+   display: grid;
+   width: 100vw;
+   height: 100vh;;
+    grid-template-areas: "head head"
+                        "sidebar sidebar"
+                        "main main"
+                        "foot  foot";
+   grid-template-rows: auto 1fr 4fr 30px;
+   grid-template-columns: 150px auto;
+ }
+
+ #page > section {
+    grid-area: head;
+    background-color: #8ca0ff;
+ }
+
+ #page > aside {
+    padding: .3rem;
+    grid-area: sidebar;
+    background-color: #ffa08c;
+    overflow-y: scroll;
+ }
+
+ #page > main {
+    padding: .3rem;
+    grid-area: main;
+    background-color: #ffff64;
+ }
+
+ #page > footer {
+    padding: .3rem;
+    grid-area: foot;
+    background-color: #8cffa0;
+ }
+
+ @media (min-width: 768px) {
+    #page {
+        grid-template-areas: "head head"
+                             "sidebar  main"
+                             "foot  foot";
+       grid-template-rows: auto 1fr 30px;
+       grid-template-columns: 250px auto;
+    }
+ }
+
+ @media (min-width: 1024px) {
+    #page {
+        grid-template-areas: "head head"
+                             "sidebar  main"
+                             "foot  foot";
+       /* grid-template-rows: 50px 1fr 30px; */
+       grid-template-columns: 350px auto;
+    }
+ }
+
+ /* ----------------------------------------------------------- */
+
+div.section  > div.section-heading {
+    margin-top: .5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+ul.section {
+   list-style: none;
+}
+
+ul.section  li.section-item {
+   margin-left: 1.5rem;
+   margin-bottom: .2rem;
+   border: 1px solid #8cffa0;
+}
+
+li.section-item > a {
+   text-decoration: none;
+   color: black;
+   padding: 4px 0 4px 8px;
+   width: 100%;
+   display: inline-block;
+}
+
+li.section-item > a:hover {
+   font-weight: 700;
+   background-color: lightblue;
+}
+
+
+ /* <div class="section">
+ <div class="section-heading">PHP</div>
+ <ul class="section">
+     <li class="section-item">item1</li> */
