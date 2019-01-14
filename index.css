@@ -31,9 +31,9 @@
    width: 100vw;
    height: 100vh;;
     grid-template-areas: "head head"
-                        "sidebar sidebar"
-                        "main main"
-                        "foot  foot";
+                         "sidebar sidebar"
+                         "main main"
+                         "foot  foot";
    grid-template-rows: auto 1fr 4fr 30px;
    grid-template-columns: 150px auto;
  }
@@ -113,8 +113,3 @@ li.section-item > a:hover {
    background-color: lightblue;
 }
 
-
- /* <div class="section">
- <div class="section-heading">PHP</div>
- <ul class="section">
-     <li class="section-item">item1</li> */
